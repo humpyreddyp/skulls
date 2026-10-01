@@ -18,6 +18,12 @@ Evaluated on October 1, 2026 using independent Codex agents. Each agent received
 
 The first review found unnecessary generic acceptance questions and questions about routine CSV formatting. The skill now requires each question to identify a specific consequential decision, derives acceptance criteria from stated outcomes, and carries shared requirements across related requests. Fresh agents reran the batch and nested-context scenarios. Their requests retain only the relevant open decisions and preserve the shared filtering requirement.
 
+## Follow-up: organization requires a user request
+
+After the user clarified the boundary, an independent agent captured a login request from two source notes while leaving all three pre-existing inbox entries byte-for-byte unchanged. A [saved checkpoint](checkpoints/organization-before.json) records the state before the next instruction. Only after an explicit follow-up did the agent merge two export requests and group the result with the audit request. It preserved the conflicting row limits, both original requests, and the separate login request. The maintaining agent checked all four expectations against the fixtures, checkpoint, and [final output](artifacts/organization-by-request/).
+
+The detailed grades now contain 39 passed checks, two partially verified checks from the earlier repeat-run evaluation, and no failures. Earlier scenarios were not all rerun for this clarification; their results remain historical evidence of those executions.
+
 ## Verification limits
 
 All final relative links resolve. Code, context, raw material, and existing definitions were preserved; only authorized request artifacts changed. Accurate references establish that outputs are grounded in the supplied evidence, but artifact inspection alone does not prove every tool read or every conversational step.

@@ -113,5 +113,25 @@
       "Leaves whether to implement missing CSV support or correct the product promise unresolved.",
       "Preserves source/context files and does not implement the fix."
     ]
+  },
+  {
+    "id": "organization-by-request",
+    "prompt": "Product and engineering context is in context/. Use intake to capture the requests described by intake/.",
+    "follow_up": "Merge work-001 and work-002, preserving conflicting details, and group the merged report-export request with work-003. Keep the login request separate.",
+    "files": {
+      "inbox/work-001-csv-export/request.md": "# CSV export\n\n## What and why\nSupport needs downloadable report data.\n\n## Expected outcome\nExport CSV.\n\n## Constraints\nMaximum 1,000 rows per export.\n\n## Acceptance criteria\nExport respects active filters.\n\n## Open questions\nWhich columns?\n\n## Sources\nsupport-ticket-17\n",
+      "inbox/work-002-report-download/request.md": "# Report download\n\n## What and why\nOperations needs the same CSV export.\n\n## Expected outcome\nDownload filtered report data.\n\n## Constraints\nMust support at least 10,000 rows per export.\n\n## Acceptance criteria\nExport dates use UTC.\n\n## Open questions\nWho can export?\n\n## Sources\nops-meeting-22\n",
+      "inbox/work-003-audit-exports/request.md": "# Audit exports\n\n## What and why\nCompliance wants a record of who exported reports.\n\n## Expected outcome\nAn export audit trail.\n\n## Constraints\nUnknown\n\n## Acceptance criteria\nUnknown\n\n## Open questions\nRetention period?\n\n## Sources\ncompliance-note-9\n",
+      "context/product.md": "# Product context\nAn internal reporting product with filterable reports and password-based login. CSV and Excel export are requested additions.\n",
+      "context/engineering.md": "# Engineering context\nThe existing reporting endpoint supports active row filters. Authentication uses a password-reset flow. Export implementation has not been selected.\n",
+      "intake/support.md": "# Support\nLogin fails after password reset for some users. Reproduction steps are missing.\n",
+      "intake/meeting.md": "# Meeting\nThe support note about login failing after password reset describes the same issue reported in this meeting. Investigate that login failure.\n"
+    },
+    "checks": [
+      "Ordinary intake leaves every pre-existing request byte-for-byte unchanged, including duplicate and related entries.",
+      "Two source notes about the same login failure produce one new request citing both notes.",
+      "Ordinary intake does not establish a work group or mark existing entries merged.",
+      "After the explicit follow-up, the selected export requests merge, the audit request is grouped, and the login request remains unchanged."
+    ]
   }
 ]

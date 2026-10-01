@@ -3,8 +3,8 @@
   "method": "Independent inspection of final filesystem artifacts against evals/cases.json fixtures and current skill; relative links resolved and their target fixtures/content inspected.",
   "runtime": "Provided executions were Codex subagent executions. No runtime Claude evaluation occurred.",
   "summary": {
-    "checks": 37,
-    "pass": 35,
+    "checks": 41,
+    "pass": 39,
     "partially_verified": 2,
     "fail": 0,
     "overall": "All final artifacts satisfy the substantive listed expectations. The two targeted reruns resolve the initial unnecessary-question findings. Temporal repeat-run assertions remain only partly verified. No remaining material issue was found."
@@ -286,6 +286,36 @@
           "evidence": "All three source/context fixtures match exactly; no implementation changes or downstream artifacts."
         }
       ]
+    },
+    {
+      "id": "organization-by-request",
+      "root": "evals/artifacts/organization-by-request",
+      "checks": [
+        {
+          "number": 1,
+          "check": "Ordinary intake leaves every pre-existing request byte-for-byte unchanged, including duplicate and related entries.",
+          "status": "pass",
+          "evidence": "Before-organization snapshot matches every pre-existing request fixture byte-for-byte."
+        },
+        {
+          "number": 2,
+          "check": "Two source notes about the same login failure produce one new request citing both notes.",
+          "status": "pass",
+          "evidence": "Capture added only work-004 for the login failure; its sources cite both support and meeting notes."
+        },
+        {
+          "number": 3,
+          "check": "Ordinary intake does not establish a work group or mark existing entries merged.",
+          "status": "pass",
+          "evidence": "No existing request changed during capture. Merge markers and the audit grouping appear only after the explicit follow-up."
+        },
+        {
+          "number": 4,
+          "check": "After the explicit follow-up, the selected export requests merge, the audit request is grouped, and the login request remains unchanged.",
+          "status": "pass",
+          "evidence": "Follow-up creates canonical work-005, preserves originals with merge links, and links work-003 reciprocally. Login request matches its checkpoint exactly. Conflicting row limits remain unresolved."
+        }
+      ]
     }
   ],
   "writing_findings": [
@@ -351,5 +381,6 @@
       "result": "All original checks remain satisfied; all targeted writing concerns are resolved in these artifacts.",
       "limit": "The other five case outputs were retained from their earlier execution; they were not rerun under the amended question rule."
     }
-  ]
+  ],
+  "scope_note": "Seven earlier cases retain their recorded grades. The organization-by-request regression was executed by an independent agent and graded by the maintaining agent against original fixtures, a saved intermediate snapshot, and final artifacts."
 }

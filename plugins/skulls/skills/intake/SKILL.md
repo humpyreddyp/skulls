@@ -1,6 +1,6 @@
 ---
 name: intake
-description: Capture and consolidate candidate software requests into an inbox from conversations or raw source material. Use for one or many requests, including merging or grouping existing inbox requests before definition. Leaves draft intent in request.md without starting design, planning, or implementation.
+description: Investigate software requests from conversations or source material, capture them in an inbox, and record unresolved questions. Use for individual requests or batches. Merge or group existing inbox requests only when the user asks.
 ---
 
 # Intake
@@ -32,7 +32,7 @@ Inspect existing inbox entries before assigning a new ID or creating a likely du
 
 ## Capture and investigate
 
-1. Read the supplied material and identify the requested outcomes. Multiple sources may describe one request; one source may describe several.
+1. Read the supplied material and identify the requested outcomes. Multiple sources describing the same request can contribute to one request document; one source describing distinct requests can produce several documents. This is source gathering during capture, not permission to reorganize existing inbox entries.
 2. Inspect relevant existing requests and investigate as described above. Cite the context or code supporting substantive findings. Existing behavior can explain a request but must not silently override the user's requested change.
 3. Create or update draft requests using the structure below. Preserve user-supplied details and source references. Distinguish confirmed information, proposed interpretations, and unknowns. Do not invent outcomes, constraints, acceptance criteria, or user decisions to complete the document.
 4. Record questions that still need human judgment. Continue capturing the rest of a batch without requiring those answers. Ask during intake only when necessary to identify what to capture or where to put it; substantive definition questions can remain in the request.
@@ -77,15 +77,21 @@ Explain what each source or context reference supports. Keep each explanation in
 
 Before handing off a request, check that its claims match the evidence, references resolve or are explicitly marked inaccessible, terminology is consistent, and every paragraph adds information.
 
-## Merge, group, and split
+## Source gathering during ordinary intake
 
-Do not assume one source, request, or inbox directory equals one eventual implementation.
+When a meeting note and a customer message describe the same login failure, capture one request and reference both sources. If that request is already captured, reuse its existing entry and add relevant evidence without changing its scope or absorbing another entry. Reprocessing unchanged sources should not create duplicate requests.
 
-- **Merge** duplicate or overlapping requests when they clearly describe the same outcome. Update one canonical `request.md`, retaining distinct requirements, source references, and unanswered questions. If existing entries are absorbed, preserve their originals and add a short `Merged into: <relative link>` note so they are no longer treated as independent pending requests. Point the canonical request back to those entries. Do not silently discard conflicting requirements; record the conflict.
+Related needs are not necessarily the same request. Capture CSV export and Excel export separately when the user presents them as distinct requests. Do not group them for joint work or merge them merely because both concern report exports. You may mention a possible relationship in the handoff without reorganizing the inbox.
+
+## Organize existing requests only when asked
+
+Merging, grouping, or splitting existing inbox requests is an optional action the user requests, not an automatic part of intake. Leave existing duplicates and related entries separate unless the user asks to reorganize them. Do not infer that instruction from a request to capture a batch or read source material.
+
+- **Merge**, when asked: combine the selected requests into one canonical `request.md`, retaining distinct requirements, source references, and unanswered questions. If existing entries are absorbed, preserve their originals and add a short `Merged into: <relative link>` note so they are no longer treated as independent pending requests. Point the canonical request back to those entries. Do not silently discard conflicting requirements; record the conflict.
 - **Group** related but distinct requests with relative links and a brief shared-outcome explanation in their `request.md` files. Keep their identities and details available for joint definition. No separate group file is required.
-- **Split** a request containing unrelated outcomes when useful, carrying the relevant source references into each resulting request and linking back to the original if one exists. Preserve the original with links to its replacements.
+- **Split**, when asked: separate an existing request into the requested outcomes, carrying the relevant source references into each resulting request and linking back to the original. Preserve the original with links to its replacements.
 
-Follow an explicit user grouping or merge decision. Otherwise consolidate clear duplicates; for uncertain overlap, link the requests and record the grouping question instead of deciding the future scope prematurely. A group may later become one definition or several.
+For example, after CSV export and Excel export have been captured, the user may ask to group them as report-export work. Grouping keeps their identities; merging produces one combined request. Neither action commits the user to an implementation or a delivery schedule.
 
 Apply these operations to inbox requests. If an item already has `intent.md`, `spec.md`, or `plan.md`, identify it as defined work and record a related incoming request without rewriting its definition or merging it away during intake.
 
@@ -93,7 +99,7 @@ Preserve raw source material. Reading `intake/` does not authorize deleting, mov
 
 ## Completion and handoff
 
-Intake is complete when available context or relevant code has been consulted, the supplied requests have been captured or matched to existing entries in the derived inbox, sources and meaningful unknowns are recorded, and any consolidation is clear. For a new project without context or code, state that evidence limit and capture the user-supplied request. Unanswered definition questions do not make intake incomplete.
+Intake is complete when available context or relevant code has been consulted, the supplied requests have been captured or matched to existing entries in the derived inbox, and sources and meaningful unknowns are recorded. If the user also requested inbox organization, explain the changes made. For a new project without context or code, state that evidence limit and capture the user-supplied request. Unanswered definition questions do not make intake incomplete.
 
 Report concise links to the requests created or updated, any merges or groups, and significant unresolved questions. Offer definition of a selected request or group as a next step when useful, without requiring an immediate response. Definition is outside this skill.
 

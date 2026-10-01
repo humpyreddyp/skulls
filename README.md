@@ -1,6 +1,6 @@
 # Skulls
 
-Small software-delivery skills for Codex and Claude Code. The first skill is **intake**: capture unfinished intent, keep open questions, and consolidate requests before deciding what to build.
+Small software-delivery skills for Codex and Claude Code. The first skill is **intake**: investigate incoming requests, capture unfinished intent, and record unresolved questions.
 
 ## Install
 
@@ -40,7 +40,8 @@ For local development, register this repository with `codex plugin marketplace a
 - Records questions for gaps, contradictions, and ambiguities that the available evidence cannot resolve.
 - Records what/why, expected outcome, constraints, acceptance criteria, open questions, and sources. Missing answers can stay unknown.
 - Handles batches without requiring every request to be defined first.
-- Merges overlapping requests, groups related ones, and preserves sources.
+- Uses multiple sources for one request when they describe the same need, preserving each source reference.
+- Merges, groups, or splits existing inbox requests only when the user asks. Ordinary intake leaves related requests separate.
 - Stops at the inbox. It does not automatically define, plan, or implement work.
 
 The same [SKILL.md](plugins/skulls/skills/intake/SKILL.md) serves both tools. Each plugin manifest points to the shared skill directory; `agents/openai.yaml` supplies optional Codex UI metadata. There are no hooks, MCP servers, or runtime dependencies.

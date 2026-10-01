@@ -2,7 +2,7 @@
 
 These scenarios check whether the skill captures requests without starting downstream work, preserves information during consolidation, and uses the project's product and engineering context.
 
-[cases.json](cases.json) contains each user request, starting files, and observable checks. Use the setup command below to create disposable projects. Give a fresh agent only the skill path, one case's project path, and its prompt. Keep the checks separate from the agent performing the task. For `raw-source-repeat`, send `follow_up` after the first run finishes.
+[cases.json](cases.json) contains each user request, starting files, and observable checks. Use the setup command below to create disposable projects. Give a fresh agent only the skill path, one case's project path, and its prompt. Keep the checks separate from the agent performing the task. When a case includes a follow-up, save the first run's files before sending it so the second run can be compared with that snapshot.
 
 ```sh
 python3 evals/prepare.py
@@ -21,5 +21,8 @@ The scenarios cover:
 | `nested-context` | Uses both kinds of context and puts the inbox beside the context directory. |
 | `codebase-fallback` | Investigates code when context is absent and captures the request in the project root inbox. |
 | `context-code-conflict` | Records contradictions between documentation and code instead of silently resolving them. |
+| `organization-by-request` | Captures one request from two sources without reorganizing existing entries, then merges and groups only after an explicit follow-up. |
+
+For the organization case, save a snapshot after ordinary capture and before sending the follow-up. Compare the original inbox entries with the fixtures and the new request with the post-organization version. The recorded run's [snapshot](checkpoints/organization-before.json) preserves that boundary.
 
 See [results.md](results.md) for the completed run and its limits.

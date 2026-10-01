@@ -1,21 +1,21 @@
 {
   "name": "skulls",
-  "version": "0.1.0+codex.20261001151032",
-  "description": "Capture and consolidate software requests before defining work.",
+  "version": "0.1.0+codex.20261001151820",
+  "description": "Investigate software requests, capture them in an inbox, and record unresolved questions.",
   "author": {
     "name": "humpyreddyp"
   },
   "skills": "./skills/",
   "interface": {
     "displayName": "Skulls",
-    "shortDescription": "Capture requests before defining work.",
-    "longDescription": "Collect requests from conversations or source material, preserve open questions, and merge or group related requests in an inbox.",
+    "shortDescription": "Investigate and capture incoming requests.",
+    "longDescription": "Read product and engineering context or relevant code, capture incoming requests, and record unresolved questions. Organize existing inbox requests only when the user asks.",
     "developerName": "humpyreddyp",
     "category": "Productivity",
     "capabilities": [],
     "defaultPrompt": [
       "Capture these requests in the inbox.",
-      "Review intake sources and consolidate overlapping requests."
+      "Investigate this request and record unresolved questions."
     ]
   },
   "repository": "https://github.com/humpyreddyp/skulls"
