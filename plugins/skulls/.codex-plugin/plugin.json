@@ -1,0 +1,22 @@
+{
+  "name": "skulls",
+  "version": "0.1.0+codex.20261001151032",
+  "description": "Capture and consolidate software requests before defining work.",
+  "author": {
+    "name": "humpyreddyp"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Skulls",
+    "shortDescription": "Capture requests before defining work.",
+    "longDescription": "Collect requests from conversations or source material, preserve open questions, and merge or group related requests in an inbox.",
+    "developerName": "humpyreddyp",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Capture these requests in the inbox.",
+      "Review intake sources and consolidate overlapping requests."
+    ]
+  },
+  "repository": "https://github.com/humpyreddyp/skulls"
+}

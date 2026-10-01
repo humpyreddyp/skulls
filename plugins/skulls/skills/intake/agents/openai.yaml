@@ -1,0 +1,4 @@
+interface:
+  display_name: "Intake"
+  short_description: "Capture and consolidate requests in the inbox"
+  default_prompt: "Use $intake to capture these requests in the project inbox, consolidate overlaps, and record unresolved questions."

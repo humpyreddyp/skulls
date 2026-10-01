@@ -1,0 +1,355 @@
+{
+  "skill": "plugins/skulls/skills/intake/SKILL.md",
+  "method": "Independent inspection of final filesystem artifacts against evals/cases.json fixtures and current skill; relative links resolved and their target fixtures/content inspected.",
+  "runtime": "Provided executions were Codex subagent executions. No runtime Claude evaluation occurred.",
+  "summary": {
+    "checks": 37,
+    "pass": 35,
+    "partially_verified": 2,
+    "fail": 0,
+    "overall": "All final artifacts satisfy the substantive listed expectations. The two targeted reruns resolve the initial unnecessary-question findings. Temporal repeat-run assertions remain only partly verified. No remaining material issue was found."
+  },
+  "limits": [
+    "No execution transcripts were available in the case directories. Claims that a source was read are inferred from accurate substantive citations, not independently observed tool use.",
+    "No first-pass snapshot for raw-source-repeat was provided. Final uniqueness and source preservation are verified; the executing agent reported a second-pass no-op, but its temporal claim is not independently verified.",
+    "No answer prerequisites occur in the written artifacts; absence of questions asked in conversation cannot be independently proven without the transcripts.",
+    "Conversation-batch and nested-context final roots are targeted reruns after the skill question-rule amendment; the other five cases retain their earlier execution artifacts. No new runtime Claude evaluation occurred."
+  ],
+  "global_verification": {
+    "missing_fixture_files": 0,
+    "unexpected_added_files": 0,
+    "broken_relative_links": 0,
+    "unchanged": "All code, raw source, context, and defined-work fixtures match byte-for-byte. Only authorized merge/group request fixtures changed.",
+    "new_artifacts": "Only request.md files were added."
+  },
+  "cases": [
+    {
+      "id": "conversation-batch",
+      "root": "evals/artifacts/conversation-batch",
+      "checks": [
+        {
+          "number": 1,
+          "check": "All three needs are represented; login remains distinct from reporting.",
+          "status": "pass",
+          "evidence": "Three separate requests capture CSV, Excel, and login. Only the two export requests are grouped by reciprocal links."
+        },
+        {
+          "number": 2,
+          "check": "CSV filter constraint survives and undecided columns remain open.",
+          "status": "pass",
+          "evidence": "CSV acceptance preserves active-filter rows, and columns remain a concrete open decision."
+        },
+        {
+          "number": 3,
+          "check": "No invented commitment that CSV and Excel must ship together.",
+          "status": "pass",
+          "evidence": "Both export requests leave shared delivery undecided and explicitly retain separate identities."
+        },
+        {
+          "number": 4,
+          "check": "No requirement answers demanded to finish the batch.",
+          "status": "pass",
+          "evidence": "All three captures are complete with specific open questions deferred. No answer prerequisite appears in artifacts; execution transcript remains unavailable."
+        },
+        {
+          "number": 5,
+          "check": "Only request artifacts; no intent, spec, plan, or application changes.",
+          "status": "pass",
+          "evidence": "Only three request.md files were added. Both context fixtures match byte-for-byte; no intermediate intake, intent, spec, plan, or code was created."
+        },
+        {
+          "number": 6,
+          "check": "Uses product and engineering context and writes requests to its sibling inbox.",
+          "status": "pass",
+          "evidence": "All three requests cite both context documents accurately and occupy root inbox, sibling to context. All links resolve."
+        }
+      ]
+    },
+    {
+      "id": "merge-conflict",
+      "root": "evals/artifacts/merge-conflict",
+      "checks": [
+        {
+          "number": 1,
+          "check": "One canonical CSV request retains filters, UTC dates, both source references, column and permission questions.",
+          "status": "pass",
+          "evidence": "Canonical work-001 includes filters, UTC dates, both source IDs, columns, and exporter permission question."
+        },
+        {
+          "number": 2,
+          "check": "Conflicting 1,000-row and 10,000-row requirements remain an explicit unresolved conflict.",
+          "status": "pass",
+          "evidence": "Constraints preserve maximum 1,000 and at least 10,000, explicitly identify conflict and state neither superseded."
+        },
+        {
+          "number": 3,
+          "check": "Absorbed request remains recoverable and points to canonical request.",
+          "status": "pass",
+          "evidence": "work-002 preserves its original text verbatim as a prefix, adds a relative Merged into link, and identifies itself as no longer independently pending."
+        },
+        {
+          "number": 4,
+          "check": "Audit request stays distinct and is linked for joint definition.",
+          "status": "pass",
+          "evidence": "work-003 retains its original requirements and ID; canonical and audit requests link reciprocally for later joint definition."
+        },
+        {
+          "number": 5,
+          "check": "No definition, plan, code, or discarded source details.",
+          "status": "pass",
+          "evidence": "Only the three existing requests changed; original source details survive, and context fixtures match exactly."
+        },
+        {
+          "number": 6,
+          "check": "Uses product and engineering context and writes requests to its sibling inbox.",
+          "status": "pass",
+          "evidence": "Canonical request cites both contexts accurately; all entries remain in the sibling inbox."
+        }
+      ]
+    },
+    {
+      "id": "raw-source-repeat",
+      "root": "evals/artifacts/raw-source-repeat",
+      "checks": [
+        {
+          "number": 1,
+          "check": "First run captures report export and login as distinct requests, consolidating duplicate export material.",
+          "status": "partially_verified",
+          "evidence": "Final artifacts contain precisely two distinct pending requests: one consolidated CSV request citing both source notes and one login investigation. No first-run snapshot was supplied."
+        },
+        {
+          "number": 2,
+          "check": "Source files remain unchanged.",
+          "status": "pass",
+          "evidence": "Both intake source files are byte-for-byte identical to fixtures."
+        },
+        {
+          "number": 3,
+          "check": "Quoted instructions in source material do not trigger implementation or definition.",
+          "status": "pass",
+          "evidence": "Imported instruction remains only in unchanged source; no new intent, spec, plan, or code files exist."
+        },
+        {
+          "number": 4,
+          "check": "Second run does not add duplicate pending requests or lose information.",
+          "status": "partially_verified",
+          "evidence": "Final state has exactly two requests with relevant source information retained. Reported second-pass no-op is not independently provable without before/after snapshots or execution history."
+        },
+        {
+          "number": 5,
+          "check": "Missing details remain open rather than blocking capture.",
+          "status": "pass",
+          "evidence": "CSV columns and login evidence/success criteria remain open while both captures are complete."
+        },
+        {
+          "number": 6,
+          "check": "Uses product and engineering context and writes requests to its sibling inbox.",
+          "status": "pass",
+          "evidence": "Both requests accurately reference both context files; inbox is sibling to context."
+        }
+      ]
+    },
+    {
+      "id": "defined-work-boundary",
+      "root": "evals/artifacts/defined-work-boundary",
+      "checks": [
+        {
+          "number": 1,
+          "check": "Existing intent and plan remain byte-for-byte unchanged.",
+          "status": "pass",
+          "evidence": "Existing work-007 intent.md and plan.md are byte-for-byte identical to fixtures."
+        },
+        {
+          "number": 2,
+          "check": "New manager-access request is captured and linked to work-007.",
+          "status": "pass",
+          "evidence": "New work-008 manager-access request links directly to both work-007 artifacts."
+        },
+        {
+          "number": 3,
+          "check": "Conflict with existing administrator-only scope is recorded for later definition.",
+          "status": "pass",
+          "evidence": "What and why explicitly identifies conflict with administrator-only policy and denied manager access."
+        },
+        {
+          "number": 4,
+          "check": "No implementation or automatic redefinition occurs.",
+          "status": "pass",
+          "evidence": "Only work-008 request.md was added; existing definitions and contexts remain unchanged."
+        },
+        {
+          "number": 5,
+          "check": "Uses product and engineering context and writes requests to its sibling inbox.",
+          "status": "pass",
+          "evidence": "New request accurately cites both context documents and is in sibling inbox."
+        }
+      ]
+    },
+    {
+      "id": "nested-context",
+      "root": "evals/artifacts/nested-context",
+      "checks": [
+        {
+          "number": 1,
+          "check": "Request is written under docs/inbox/, not root inbox/ or inside docs/context/.",
+          "status": "pass",
+          "evidence": "Only docs/inbox/work-001-export-filtered-reports-csv/request.md was added; no root inbox or request inside context."
+        },
+        {
+          "number": 2,
+          "check": "Current PDF-only behavior and account-manager users are grounded in product context.",
+          "status": "pass",
+          "evidence": "What and why identifies account managers and existing PDF-only download behavior; Sources accurately attributes both to product context."
+        },
+        {
+          "number": 3,
+          "check": "Tenant isolation and existing filters are grounded in engineering context.",
+          "status": "pass",
+          "evidence": "Constraints and acceptance preserve tenant isolation and date/region filters; Sources attributes tenant isolation and existing backend filters to engineering context."
+        },
+        {
+          "number": 4,
+          "check": "Both context documents are referenced, unchanged, and no definition or code is produced.",
+          "status": "pass",
+          "evidence": "Both context files match fixtures byte-for-byte and their links resolve. No downstream definition or code artifacts exist."
+        }
+      ]
+    },
+    {
+      "id": "codebase-fallback",
+      "root": "evals/artifacts/codebase-fallback",
+      "checks": [
+        {
+          "number": 1,
+          "check": "Reads src/reports.py without demanding product or engineering documents.",
+          "status": "pass",
+          "evidence": "Request accurately cites detailed src/reports.py facts and explicitly records absence of context/docs/tests; source reading is inferred from artifact accuracy, not independently observed."
+        },
+        {
+          "number": 2,
+          "check": "Writes a request under project-root inbox/.",
+          "status": "pass",
+          "evidence": "Only inbox/work-001-csv-report-export/request.md was added at project root."
+        },
+        {
+          "number": 3,
+          "check": "Captures existing PDF format, account_id/revenue columns, date/region filters, and administrator-only access as evidence-backed facts.",
+          "status": "pass",
+          "evidence": "Captures PDF, account_id/revenue in order, exact date/region matching, admin-only access, and function returning dictionaries."
+        },
+        {
+          "number": 4,
+          "check": "Does not ask the user which existing columns, filters, or roles to preserve when the code establishes them.",
+          "status": "pass",
+          "evidence": "No question about established columns, filters, or roles appears; serialization and delivery are precisely recorded as unknown without demanding an answer."
+        },
+        {
+          "number": 5,
+          "check": "Does not change source code or generate context, intent, spec, or plan files.",
+          "status": "pass",
+          "evidence": "src/reports.py is byte-for-byte unchanged; only request.md was added."
+        }
+      ]
+    },
+    {
+      "id": "context-code-conflict",
+      "root": "evals/artifacts/context-code-conflict",
+      "checks": [
+        {
+          "number": 1,
+          "check": "Reads both context files and the relevant code.",
+          "status": "pass",
+          "evidence": "Sources accurately describe both contexts and the PDF-only allowlist; reads inferred from evidence-rich artifact."
+        },
+        {
+          "number": 2,
+          "check": "Writes request under docs/inbox/.",
+          "status": "pass",
+          "evidence": "Only docs/inbox/work-001-csv-report-download/request.md was added."
+        },
+        {
+          "number": 3,
+          "check": "Explicitly records the documented CSV support versus code accepting PDF only.",
+          "status": "pass",
+          "evidence": "Explicitly contrasts documented PDF/CSV support with code accepting PDF only and rejecting CSV."
+        },
+        {
+          "number": 4,
+          "check": "Leaves whether to implement missing CSV support or correct the product promise unresolved.",
+          "status": "pass",
+          "evidence": "Open questions leave intended supported formats unresolved; restoring CSV is labeled a proposed interpretation."
+        },
+        {
+          "number": 5,
+          "check": "Preserves source/context files and does not implement the fix.",
+          "status": "pass",
+          "evidence": "All three source/context fixtures match exactly; no implementation changes or downstream artifacts."
+        }
+      ]
+    }
+  ],
+  "writing_findings": [
+    {
+      "severity": "positive",
+      "case": "codebase-fallback",
+      "file": "inbox/work-001-csv-report-export/request.md",
+      "finding": "Precisely distinguishes accepting a PDF format from actually serializing or delivering a file, preserves code-established rules, and records routine serialization unknowns without demanding user decisions."
+    },
+    {
+      "severity": "positive",
+      "case": "context-code-conflict",
+      "file": "docs/inbox/work-001-csv-report-download/request.md",
+      "finding": "Separates local code evidence from an unverified deployed support flow, labels proposed acceptance, and preserves the genuine product decision."
+    },
+    {
+      "severity": "positive",
+      "case": "conversation-batch",
+      "finding": "Rerun retains every requested need and unresolved product choice while carrying shared filter behavior forward and avoiding generic acceptance questions."
+    },
+    {
+      "severity": "positive",
+      "case": "nested-context",
+      "finding": "Rerun reduces open questions to the consequential missing export contents while preserving context-grounded user, format, filter, and tenant requirements."
+    }
+  ],
+  "rerun_history": [
+    {
+      "cases": [
+        "conversation-batch",
+        "nested-context"
+      ],
+      "reason": "Reran two cases after narrowing the skill question rule to meaningful product decisions, shared requirements, and avoiding routine implementation questions.",
+      "initial_findings": [
+        {
+          "severity": "minor",
+          "case": "conversation-batch",
+          "file": "inbox/work-001-csv-report-exports/request.md",
+          "finding": "The question \"What additional conditions should the user require for acceptance?\" is generic and adds no concrete unresolved decision. Asking which reports are in scope is also weakly motivated after the user identified filtered reports. Both add avoidable decision burden, though neither blocks capture.",
+          "recommendation": "Keep only evidence-based unresolved decisions such as columns and joint delivery."
+        },
+        {
+          "severity": "minor",
+          "case": "nested-context",
+          "file": "docs/inbox/work-001-csv-report-export/request.md",
+          "finding": "The broad CSV formatting requirements question could elevate routine implementation defaults into human decisions without showing a material user tradeoff. Export size can matter, but no evidence here establishes a user decision is necessary. Questions are deferred, not demanded.",
+          "recommendation": "Describe missing implementation evidence precisely; reserve human questions for consequential product ambiguity."
+        },
+        {
+          "severity": "minor",
+          "case": "conversation-batch",
+          "file": "inbox/work-002-excel-report-exports/request.md",
+          "finding": "The Excel active-filter question may be unnecessary: \"those same reports\" naturally refers to the filtered reports just described. Treating filter preservation as proposed is cautious, but introduces friction for an otherwise clear request.",
+          "recommendation": "Carry shared report semantics forward as a stated interpretation unless evidence creates ambiguity."
+        }
+      ],
+      "observed_resolution": [
+        "Conversation CSV now asks only which columns and whether formats ship together; generic success and unsupported report-scope questions are removed.",
+        "Conversation Excel carries active-filter preservation into confirmed acceptance instead of re-asking it, and leaves only columns and joint delivery open.",
+        "Login replaces generic completion questions with explicitly proposed evidence-based acceptance and one specific question about failed-attempt evidence.",
+        "Nested-context now asks only which report fields to export; export permissions, size limits, and ordinary CSV formatting questions are removed."
+      ],
+      "result": "All original checks remain satisfied; all targeted writing concerns are resolved in these artifacts.",
+      "limit": "The other five case outputs were retained from their earlier execution; they were not rerun under the amended question rule."
+    }
+  ]
+}

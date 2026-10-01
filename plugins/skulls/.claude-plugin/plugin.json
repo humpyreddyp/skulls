@@ -1,0 +1,10 @@
+{
+  "name": "skulls",
+  "version": "0.1.0+codex.20261001151032",
+  "description": "Capture and consolidate software requests before defining work.",
+  "author": {
+    "name": "humpyreddyp"
+  },
+  "repository": "https://github.com/humpyreddyp/skulls",
+  "skills": "./skills/"
+}

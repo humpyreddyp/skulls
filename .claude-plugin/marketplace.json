@@ -1,0 +1,16 @@
+{
+  "name": "skulls",
+  "owner": {
+    "name": "humpyreddyp"
+  },
+  "plugins": [
+    {
+      "name": "skulls",
+      "source": "./plugins/skulls",
+      "description": "Capture and consolidate software requests before defining work."
+    }
+  ],
+  "metadata": {
+    "description": "Software-delivery skills for capturing and consolidating requests."
+  }
+}
