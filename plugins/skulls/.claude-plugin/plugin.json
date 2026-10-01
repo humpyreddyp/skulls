@@ -1,7 +1,7 @@
 {
   "name": "skulls",
-  "version": "0.1.0+codex.20261001151820",
-  "description": "Investigate software requests, capture them in an inbox, and record unresolved questions.",
+  "version": "0.1.0+codex.20261001163226",
+  "description": "Investigate software requests, capture draft intent documents, and record unresolved questions.",
   "author": {
     "name": "humpyreddyp"
   },

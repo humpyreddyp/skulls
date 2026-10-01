@@ -7,7 +7,7 @@
     {
       "name": "skulls",
       "source": "./plugins/skulls",
-      "description": "Investigate software requests, capture them in an inbox, and record unresolved questions."
+      "description": "Investigate software requests, capture draft intent documents, and record unresolved questions."
     }
   ],
   "metadata": {

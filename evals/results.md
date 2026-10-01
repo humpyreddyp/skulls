@@ -1,6 +1,6 @@
 # Intake evaluation results
 
-Evaluated on October 1, 2026 using independent Codex agents. Each agent received the skill, a user request, and a disposable project. A separate reviewer inspected the resulting files against the [scenario checks](cases.json). Claude Code's own validator checked its plugin and marketplace manifests; no Claude model session ran the behavioral scenarios.
+Evaluated on October 1, 2026 using independent Codex agents. Each agent received the skill, a user request, and a disposable project. A separate reviewer inspected the resulting files against the [original scenario checks](history/request-cases.json). Claude Code's own validator checked its plugin and marketplace manifests; no Claude model session ran the behavioral scenarios. The earlier results below use the previous request document format.
 
 ## Observed behavior
 
@@ -30,4 +30,4 @@ All final relative links resolve. Code, context, raw material, and existing defi
 
 The source-repeat executor reported a second pass with no changes. Without a first-pass snapshot, the independent reviewer verified the final absence of duplicates and preservation of information, not the exact before-and-after history.
 
-These are focused scenario evaluations, not a statistical success-rate estimate or a runtime comparison between Codex and Claude. [The detailed grades](grades.json) record each check and its evidence. [Saved projects](artifacts/) let reviewers inspect the outputs alongside their original context and sources; [the scenario definitions](cases.json) retain the original fixture contents for comparison.
+These are focused scenario evaluations, not a statistical success-rate estimate or a runtime comparison between Codex and Claude. [The detailed grades](grades.json) record each check and its evidence. [Saved projects](artifacts/) let reviewers inspect the outputs alongside their original context and sources; [the original scenario definitions](history/request-cases.json) retain the matching fixture contents for comparison.

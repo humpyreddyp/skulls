@@ -1,6 +1,6 @@
 # Skulls
 
-Small software-delivery skills for Codex and Claude Code. The first skill is **intake**: investigate incoming requests, capture unfinished intent, and record unresolved questions.
+Small software-delivery skills for Codex and Claude Code. The first skill is **intake**: investigate incoming requests, capture draft intent documents, and record unresolved questions.
 
 ## Install
 
@@ -36,13 +36,13 @@ For local development, register this repository with `codex plugin marketplace a
 
 - Accepts conversations, `intake/` material, or explicitly identified sources.
 - Uses product and engineering context when available; inspects relevant code and tests when context is missing or incomplete.
-- Creates `inbox/` beside the directory containing that context: `docs/context/` produces `docs/inbox/work-NNN-short-summary/request.md`. Without a context directory, uses the target project's root inbox.
+- Creates `inbox/` beside the directory containing that context: `docs/context/` produces `docs/inbox/work-NNN-short-summary/intent.md`. Without a context directory, uses the target project's root inbox.
 - Records questions for gaps, contradictions, and ambiguities that the available evidence cannot resolve.
-- Records what/why, expected outcome, constraints, acceptance criteria, open questions, and sources. Missing answers can stay unknown.
+- Writes intent.md with Status: draft, recording what/why, expected outcome, constraints, known acceptance criteria, open questions, and sources. Missing answers can stay unknown. Later work refines the same file; the filename does not indicate approval to implement.
 - Handles batches without requiring every request to be defined first.
 - Uses multiple sources for one request when they describe the same need, preserving each source reference.
 - Merges, groups, or splits existing inbox requests only when the user asks. Ordinary intake leaves related requests separate.
-- Stops at the inbox. It does not automatically define, plan, or implement work.
+- Stops at the inbox. It does not automatically design, plan, implement, or approve captured work.
 
 The same [SKILL.md](plugins/skulls/skills/intake/SKILL.md) serves both tools. Each plugin manifest points to the shared skill directory; `agents/openai.yaml` supplies optional Codex UI metadata. There are no hooks, MCP servers, or runtime dependencies.
 

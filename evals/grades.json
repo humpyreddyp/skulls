@@ -1,6 +1,6 @@
 {
   "skill": "plugins/skulls/skills/intake/SKILL.md",
-  "method": "Independent inspection of final filesystem artifacts against evals/cases.json fixtures and current skill; relative links resolved and their target fixtures/content inspected.",
+  "method": "Independent inspection of final filesystem artifacts against evals/history/request-cases.json fixtures and current skill; relative links resolved and their target fixtures/content inspected.",
   "runtime": "Provided executions were Codex subagent executions. No runtime Claude evaluation occurred.",
   "summary": {
     "checks": 41,
@@ -382,5 +382,6 @@
       "limit": "The other five case outputs were retained from their earlier execution; they were not rerun under the amended question rule."
     }
   ],
-  "scope_note": "Seven earlier cases retain their recorded grades. The organization-by-request regression was executed by an independent agent and graded by the maintaining agent against original fixtures, a saved intermediate snapshot, and final artifacts."
+  "scope_note": "Seven earlier cases retain their recorded grades. The organization-by-request regression was executed by an independent agent and graded by the maintaining agent against original fixtures, a saved intermediate snapshot, and final artifacts.",
+  "scenario_definitions": "evals/history/request-cases.json"
 }

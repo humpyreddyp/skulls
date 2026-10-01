@@ -1,7 +1,7 @@
 {
   "name": "skulls",
-  "version": "0.1.0+codex.20261001151820",
-  "description": "Investigate software requests, capture them in an inbox, and record unresolved questions.",
+  "version": "0.1.0+codex.20261001163226",
+  "description": "Investigate software requests, capture draft intent documents, and record unresolved questions.",
   "author": {
     "name": "humpyreddyp"
   },
@@ -9,7 +9,7 @@
   "interface": {
     "displayName": "Skulls",
     "shortDescription": "Investigate and capture incoming requests.",
-    "longDescription": "Read product and engineering context or relevant code, capture incoming requests, and record unresolved questions. Organize existing inbox requests only when the user asks.",
+    "longDescription": "Read product and engineering context or relevant code, capture draft intent documents in an inbox, and record unresolved questions. Organize existing inbox requests only when the user asks.",
     "developerName": "humpyreddyp",
     "category": "Productivity",
     "capabilities": [],
